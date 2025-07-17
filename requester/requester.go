@@ -66,7 +66,7 @@ type Work struct {
 	// H2 is an option to make HTTP/2 requests
 	H2 bool
 
-	// K is an option to Skip verify insecure TLS certs.
+	// K is an option to skip certificate verification.
 	K bool
 
 	// Timeout in seconds.

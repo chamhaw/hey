@@ -93,7 +93,7 @@ Options:
   -a  Basic authentication, username:password.
   -x  HTTP Proxy address as host:port.
   -h2 Enable HTTP/2.
-  -k  Skip verify insecure TLS certs.
+  -k  Skip certificate verification.
 
   -host	HTTP Host header.
 
