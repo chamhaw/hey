@@ -66,6 +66,9 @@ type Work struct {
 	// H2 is an option to make HTTP/2 requests
 	H2 bool
 
+	// K is an option to Skip verify insecure TLS certs.
+	K bool
+
 	// Timeout in seconds.
 	Timeout int
 
@@ -237,7 +240,7 @@ func (b *Work) runWorkers() {
 
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{
-			InsecureSkipVerify: true,
+			InsecureSkipVerify: b.K,
 			ServerName:         b.Request.Host,
 		},
 		MaxIdleConnsPerHost: min(b.C, maxIdleConn),
